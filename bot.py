@@ -18,7 +18,7 @@ async def start(update, context):
 
 async def hello(update, context):
   # await send_text(update, context, "Hello" + update.message.text)
-  await send_text_buttons(update, context, "Hello" + ' ' + update.message.from_user.username, {
+  await send_text_buttons(update, context, "Hello" + ' ' + update.message.from_user.first_name + ' ' + update.message.from_user.last_name, {
     'start': 'START',
     'stop': 'STOP' 
   })
